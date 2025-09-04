@@ -1,13 +1,13 @@
-# Netlify deployment configuration
+# Netlify configuration file
 # This file tells Netlify how to build and deploy your site.
 
 [build]
-  # The command to run to build your site
+  # Command to build your Vite project
   command = "yarn build"
   
-  # The directory that contains the built site
+  # The directory where the built files are located
   publish = "dist"
 
 [build.environment]
-  # Specify the Node.js version for compatibility
+  # Specify the Node.js version to ensure consistency
   NODE_VERSION = "20"
