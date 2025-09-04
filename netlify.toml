@@ -1,15 +1,13 @@
-# Netlify build configuration for a Vite project
+# Netlify deployment configuration
+# This file tells Netlify how to build and deploy your site.
 
 [build]
-  # Command to build the site
+  # The command to run to build your site
   command = "yarn build"
   
-  # Directory to publish (Vite's default output)
+  # The directory that contains the built site
   publish = "dist"
 
-# Redirect rule for Single Page Applications (SPA)
-# Ensures that all paths are served by index.html, which is good practice.
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+[build.environment]
+  # Specify the Node.js version for compatibility
+  NODE_VERSION = "20"
